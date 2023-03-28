@@ -9,8 +9,26 @@
 <body>
     <h1>Homework 8</h1>
     <h3>Eli Broun</h3>
+    <br>
     <h5>Research Question - How many schools in California are within 10 miles of a recorded wildfire site?</h5>
     <a href="./Data/California Wildfire Map.png"></a>
     <img src="./Data/California Wildfire Map.png" width='700px'> 
+    <br>
+    <h5>Methods</h5>
+    <br>
+    <p>To create this map I used the buffer and intersect methods. Once I had found a polygon of the recorded wildfires in 
+        California i had to create a 10 mile buffer aroud it. I did this by creating a new .geojson of the polygon in the 3857
+        projection and then using the buffer tool on that new polygon. Once I had my new buffer polygon I added a vector of 
+        the schools in California and also put tnat is 3857. I then used the intersect tool to get just the schools that fell within
+        the wildfire buffer.
+    </p>
+    <br>
+    <h3>Polygons</h3>
+    <a href="./Data/K-12 Public Schools.geojson">California Public Schools Vector</a>
+    <a href=""></a>
+    <br>
+    <h3>Data Used</h3>
+    <a href="https://data.fs.usda.gov/geodata/edw/datasets.php?xmlKeyword=S_USA.FinalFirePerimeter">NAtional Wildfire Data</a>
+    <a href="https://gis.data.ca.gov/datasets/e4ef40a13e424079a2b8eced975d50f7_0/explore?location=39.044925%2C-120.154469%2C6.81">California Public School Data</a>
 </body>
 </html>
